@@ -36,6 +36,7 @@ Click the Devices tab
 Click Add Device	
 In the Device Type dropdown select <your sensor>	
 In the Device ID field, enter the MAC address (without the colons)	 
+use "wpa_cli status" in the command line to get your mac address
 Click Continue	
 Copy your device's properties!!!	
 Save the properties into a file called sensor.properties	 
