@@ -1,13 +1,12 @@
 #Steps in Node Red
-1.) Subscribe to the command named “list”.  
-2.) 
-
 
 ##Create a device in Watson IoT Dashboard
+see the following link
 
 ##Install Watson IoTP (wiotp) in node
+see the following link
 
-#Edit "wiotp in" node 
+##Edit "wiotp in" node 
   Connect as device  
   Credentials - add new wiotp credentials (see below)  
   Command - specify command = list    
