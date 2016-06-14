@@ -17,7 +17,7 @@ Here is the link to clone the git repository
 ##Prerequisites
 IBM IoT Cloud service in Bluemix.  
 
-#TO Create an IoT Service in Bluemix:		
+##To Create an IoT Service in Bluemix:		
 
 ##Create an organization:		
 Log into bluemix.net	
