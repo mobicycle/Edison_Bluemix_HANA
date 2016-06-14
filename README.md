@@ -21,7 +21,7 @@ IBM IoT Cloud service in Bluemix.
 
 ##Create an organization:		
 Log into bluemix.net	
-Go to the catalo	 
+Go to the catalog	 
 Select create an new IoT service	
 Name the service <service name>	
 Go to the App dropdown	 
