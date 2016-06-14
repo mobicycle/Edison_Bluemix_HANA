@@ -16,7 +16,7 @@
    },
    
    "description": "Publish data to the Watson IoT cloud.",
-   "main": "sensor.js"
+   "main": "app.js"
 
   "name": "edison2bluemix",
   "version": "0.0.1",
