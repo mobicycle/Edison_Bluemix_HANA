@@ -8,6 +8,12 @@ see also http://m2m.demos.ibm.com/iotstarter.html
   npm install node-red-contrib-scx-ibmiotapp 
   npm install node-red-contrib-ibm-watson-iot
 
+##Build a Bluemix app
+  Create a new cloud foundry app and chose SDK for Node.js. 
+  Bind your already existing IoT plarform service  
+  The app connects to the IoT plattform using the credentials in VCAP_SERVICES. 
+  Go to “Environment Variables” (look above “Start Coding”)
+
 ##Create a device in Watson IoT Dashboard
   Open Watson IoT Dashboard
   Create device type
