@@ -71,8 +71,6 @@ function monitorSensor(client) {
 	  console.log('Connected To Sensor');
 	  device.discoverServicesAndCharacteristics(function(callback){
 	    //getDeviceInfo();
-		initAirSensors();
-		initAccelAndGyro();
 		initKeys();
 	  });
 	});
