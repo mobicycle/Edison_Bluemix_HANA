@@ -1,10 +1,19 @@
 #Steps in Node Red
 
-##Create a device in Watson IoT Dashboard
-see the following link
+see also http://m2m.demos.ibm.com/iotstarter.html
 
-##Install Watson IoTP (wiotp) in node
-see the following link
+##Prerequisites
+  Install either of the two relevant modules
+  cd /home/root/.node-red/node_modules/
+  npm install node-red-contrib-scx-ibmiotapp 
+  npm install node-red-contrib-ibm-watson-iot
+
+##Create a device in Watson IoT Dashboard
+  Open Watson IoT Dashboard
+  Create device type
+  Create a device
+  Add a name
+  Add an auth token
 
 ##Edit "wiotp in" node 
   Connect as device  
@@ -29,4 +38,7 @@ see the following link
   Extra input parameters - leave blank    
   Use spawn instead of exec? - leave blank    
   Name optional 
+
+##Connect to IBM Watson Internet of Things Plaform as a Device
+
   
