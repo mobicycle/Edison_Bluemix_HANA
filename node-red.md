@@ -1,4 +1,4 @@
-Steps
+Steps in Node Red
 1.) Subscribe to the command named “list”.
 2.) 
 
