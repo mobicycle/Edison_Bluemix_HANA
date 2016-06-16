@@ -15,9 +15,9 @@ see also http://m2m.demos.ibm.com/iotstarter.html
   Go to “Environment Variables” (look above “Start Coding”) 
 
 ##Create a device in Watson IoT Dashboard
-  Open Watson IoT Dashboard 
+  Open Watson IoT Dashboard  
   Create device type  
-  Create a device 
+  Create a device  
   Add a name  
   Add an auth token 
 
