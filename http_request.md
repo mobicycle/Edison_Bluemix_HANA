@@ -19,16 +19,16 @@ jQuery runs the AJAX request in our client application. The server receives a re
   -a framework
   
 ##Code
-mkdir myapp
-cd myapp
-npm init
-npm install express --save
-npm install connect --save
+mkdir myapp   
+cd myapp    
+npm init    
+npm install express --save    
+npm install connect --save    
 
 ##Files
-1.) Server-side Javascript code - myapi.js
-2.) A simple HTML page - index.html
-3.) Client-side Javascript - myclient.js
+1.) Server-side Javascript code - myapi.js    
+2.) A simple HTML page - index.html   
+3.) Client-side Javascript - myclient.js    
 
 
   
