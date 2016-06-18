@@ -32,7 +32,7 @@ npm install connect --save
 3.) Client-side Javascript - browser.js    
 
 ##Build a server in Javascript
-  Port = 3000 
+  Port = 3000        
   Format = JSON
   
 ##Install packages
@@ -42,4 +42,11 @@ npm install connect --save
 ##Assign Express to a variable  
   var app = express();
 
+##Define an array of objects for the client to query
+  var inputs = [{ pin: '11', gpio: '17', value: 1 },
+                { pin: '12', gpio: '18', value: 0 }];
+
+##Configure Express to serve index.html, browser.js et al
+  app.use(express['static'](__dirname ));
+  
   
