@@ -19,6 +19,14 @@ jQuery runs the AJAX request in our client application. The server receives a re
   -a framework        
   -create our application server as an object
   
+##MRAA
+  IO library that helps you use I2c, SPI, gpio, uart, pwm, analog inputs (aio)        
+  see https://www.npmjs.com/package/mraa      
+  
+##µpm 
+  a (very) tiny package manager   
+  npm install -g upm    
+  
 ##Code
 mkdir myapp   
 cd myapp    
@@ -83,4 +91,7 @@ npm install connect --save
     Another mraa alternative, Sysfs, is a virtual file system. Use it to access hardware and the Linux kernel.
     Yocto Linux is a non-realtime operating system  
     I2C is a communications bus. Use it to connect a very large range of sensors. 
+    The Edison has 40 digital GPIO connections, but no analog I/O.  
+    You can write programs for the microcontroller or MCU that work with the GPIO lines without the need to involve the host CPU.
     
+    ##Install
