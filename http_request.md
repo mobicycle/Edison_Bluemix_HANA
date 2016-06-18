@@ -26,6 +26,10 @@ jQuery runs the AJAX request in our client application. The server receives a re
 ##µpm 
   a (very) tiny package manager   
   npm install -g upm    
+  
+##Weaved
+  connect easily and securely to your Edison from a mobile app or browser window        
+  see https://developer.weaved.com/portal/members/edison.php
 
 #Part 1: Getting Started  
 
@@ -37,7 +41,8 @@ cd myapp
   Port = 3000        
   Format = JSON
 
-#Part 2: Express: Define the API middleware for our server-side application  
+#Part 2: Express:   
+Goal: Define the API middleware for our server-side application
 
 ##Install Express
 npm init    
@@ -66,7 +71,7 @@ npm install connect --save
 
 ####Express route to handle errors
 
-#####Start the server application, listening on port 3000:
+####Start the server application, listening on port 3000:
 
 #Files
 ##Create the files
@@ -101,6 +106,8 @@ npm install connect --save
     enter `node app.js`
     open a web browser on http://your_edison_IP_address:3000
     
+#Part 4: 
+
 ##GPIO Notes
     The mraa C library is the most direct way to get in touch with the Intel Edison's GPIO lines.
     The faster way to work with GPIO lines is via memory mapped I/O.
@@ -110,4 +117,10 @@ npm install connect --save
     The Edison has 40 digital GPIO connections, but no analog I/O.  
     You can write programs for the microcontroller or MCU that work with the GPIO lines without the need to involve the host CPU.
     
-##Install
+##Install   
+
+#Part 5:      
+Congratulations! You now have a new web API running on Edison.         
+To access your API from the internet, either          
+-open the port on your LAN router to allow inbound requests (security risk)         
+-use a service such as weaved.com      
