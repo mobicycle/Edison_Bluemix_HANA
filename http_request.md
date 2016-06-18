@@ -43,7 +43,7 @@ npm install connect --save
   var app = express();
 
 ##Define an array of objects for the client to query
-  var inputs = [{ pin: '11', gpio: '17', value: 1 },
+  var inputs = [{ pin: '11', gpio: '17', value: 1 },    
                 { pin: '12', gpio: '18', value: 0 }];
 
 ##Configure Express to serve index.html, browser.js et al
@@ -63,5 +63,5 @@ npm install connect --save
 
 ##Index.html  
   Create a placeholder to display the I/O values retrieved from Edison    
-  Set up an input div as a placeholder, <code><div id="input"></div></code>
+  Set up an input div as a placeholder, `<div id="input"></div>`      
   View output in our client-side JavaScript code sitting in browser.js
