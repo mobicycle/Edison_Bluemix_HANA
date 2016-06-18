@@ -49,4 +49,16 @@ npm install connect --save
 ##Configure Express to serve index.html, browser.js et al
   app.use(express['static'](__dirname ));
   
+#Part 2: Define the API middleware for our server-side application  
+
+##Define routes for the API calls and/or page requests to our server
+
+###Express route for incoming requests
+
+###Express route for any other unrecognised incoming requests
+
+###Express route to handle errors
+
+###Start the server application, listening on port 3000:
+  
   
