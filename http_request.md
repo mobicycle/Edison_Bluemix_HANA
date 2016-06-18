@@ -26,21 +26,23 @@ jQuery runs the AJAX request in our client application. The server receives a re
 ##µpm 
   a (very) tiny package manager   
   npm install -g upm    
-  
+
+#Part 1: Getting Started  
+
 ##Make the app
 mkdir myapp   
 cd myapp
-
-##Install Express
-npm init    
-npm install express --save    
-npm install connect --save    
 
 ##Build a server in Javascript
   Port = 3000        
   Format = JSON
 
-#Part 1: Express: Define the API middleware for our server-side application  
+#Part 2: Express: Define the API middleware for our server-side application  
+
+##Install Express
+npm init    
+npm install express --save    
+npm install connect --save    
 
 ##Install packages
   var http = require('http');          
