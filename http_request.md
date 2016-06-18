@@ -21,7 +21,8 @@ jQuery runs the AJAX request in our client application. The server receives a re
 ####Restify
   Is a node.js module built specifically to enable you to build correct REST web services.       
   Borrows heavily from express    
-  Exists for "strict" API services that are maintanable and observable. 
+  Exists for "strict" API services that are maintanable and observable
+  see http://restify.com/
 
 ####Express
   -a framework        
