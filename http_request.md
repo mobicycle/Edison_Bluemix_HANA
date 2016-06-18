@@ -19,7 +19,9 @@ jQuery runs the AJAX request in our client application. The server receives a re
 
 ###Library: Rest API 
 ####Restify
-npm install restify  
+  Is a node.js module built specifically to enable you to build correct REST web services.       
+  Borrows heavily from express    
+  Exists for "strict" API services that are maintanable and observable. 
 
 ####Express
   -a framework        
@@ -51,8 +53,10 @@ cd myapp
   Format = JSON
   var server = restify.createServer();
   
+#Part 2a: Restify:
+npm install restify  
 
-#Part 2: Express:   
+#Part 2b: Express:   
 Goal: Define the API middleware for our server-side application
 
 ##Install Express
