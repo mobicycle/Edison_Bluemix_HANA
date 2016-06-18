@@ -54,7 +54,8 @@ cd myapp
   var server = restify.createServer();
   
 #Part 2a: Restify:
-npm install restify  
+npm install restify 
+invoke the createServer API
 
 #Part 2b: Express:   
 Goal: Define the API middleware for our server-side application
