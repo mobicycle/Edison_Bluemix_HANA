@@ -60,5 +60,8 @@ npm install connect --save
 ###Express route to handle errors
 
 ###Start the server application, listening on port 3000:
-  
-  
+
+##Index.html  
+  Create a placeholder to display the I/O values retrieved from Edison    
+  Set up an input div as a placeholder, "<div id="input"></div>"
+  View output in our client-side JavaScript code sitting in browser.js
