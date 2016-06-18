@@ -63,5 +63,5 @@ npm install connect --save
 
 ##Index.html  
   Create a placeholder to display the I/O values retrieved from Edison    
-  Set up an input div as a placeholder, "<div id="input"></div>"
+  Set up an input div as a placeholder, <code><div id="input"></div></code>
   View output in our client-side JavaScript code sitting in browser.js
