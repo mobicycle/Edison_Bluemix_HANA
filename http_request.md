@@ -53,41 +53,50 @@ cd myapp
   Port = 3000        
   Format = JSON
   var server = restify.createServer();
+
+#Part 2: Define the API middleware for our server-side application
   
-#Part 2a: Restify:
-npm install restify 
+##Part 2a: Restify:
+npm install restify          
 invoke the createServer API
 
-#Part 2b: Express:   
-Goal: Define the API middleware for our server-side application
+var restify = require('restify');  
+var server = restify.createServer();
+server.use(restify.bodyParser());
 
-##Install Express
+Note: bodyParser() automatically turns your request data into a JavaScript object on the server 
+
+###Configure different routes and their associated callbacks
+
+##Part 2b: Express:   
+
+###Install Express
 npm init    
 npm install express --save    
 npm install connect --save    
 
-##Install packages
+###Install packages
   var http = require('http'); 
   var restify = require('restify');
   var express = require('express');
   
-##Assign Express to a variable  
+###ssign Express to a variable  
   var app = express();
 
-##Define an array of objects for the client to query
+###Define an array of objects for the client to query
   var inputs = [{ pin: '11', gpio: '17', value: 1 },    
                 { pin: '12', gpio: '18', value: 0 }];
 
-##Configure Express to serve index.html, browser.js et al
+###Configure Express to serve index.html, browser.js et al
   app.use(express['static'](__dirname ));
   
-##Define routes for the API calls and/or page requests to our server
+###Define routes for the API calls and/or page requests to our server.
 
-####Express route for incoming requests
+#####Express route for incoming requests
 
-####Express route for any other unrecognised incoming requests
+#####Express route for any other unrecognised incoming requests
 
-####Express route to handle errors
+#####Express route to handle errors
 
 ####Start the server application, listening on port 3000:
 
@@ -121,7 +130,7 @@ npm install connect --save
 
 ##Start your web server which runs on your Edison 
     cd into the folder you have saved the source files
-    enter `node app.js`
+    enter `node backend.js`
     open a web browser on http://your_edison_IP_address:3000
     
 #Part 4: 
