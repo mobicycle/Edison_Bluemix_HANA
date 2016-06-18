@@ -27,14 +27,16 @@ jQuery runs the AJAX request in our client application. The server receives a re
   a (very) tiny package manager   
   npm install -g upm    
   
-##Code
+##Make the app
 mkdir myapp   
-cd myapp    
+cd myapp
+
+##Install Express
 npm init    
 npm install express --save    
 npm install connect --save    
 
-##Files
+##Create the files
 1.) Server-side Javascript code - backend.js    
 2.) A simple HTML page - index.html   
 3.) Client-side Javascript - browser.js    
@@ -42,7 +44,9 @@ npm install connect --save
 ##Build a server in Javascript
   Port = 3000        
   Format = JSON
-  
+
+#Part 1: Express
+
 ##Install packages
   var http = require('http');          
   var express = require('express');
@@ -105,4 +109,4 @@ npm install connect --save
     The Edison has 40 digital GPIO connections, but no analog I/O.  
     You can write programs for the microcontroller or MCU that work with the GPIO lines without the need to involve the host CPU.
     
-    ##Install
+##Install
