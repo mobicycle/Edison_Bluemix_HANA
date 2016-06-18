@@ -9,3 +9,9 @@ RESTful APIs using AJAX principles allow a single-page client web app use to com
 ##Who? 
 jQuery runs the AJAX request in our client application. The server receives a request in the form of an XMLHttpRequest object. Javascript dynamically changes the current page to reflect the request. The response or HTTP reply is JavaScript code. The format is either as a string or in JSON.    
 
+##PREREQUISITES
+##Node.JS
+  -a backend (server-side) framework for building single-page or client-server web apps
+  -asynchronous, event-based programming model
+  -see https://nodejs.org for installation instructions
+  
