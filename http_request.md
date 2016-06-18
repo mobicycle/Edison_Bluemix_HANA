@@ -69,6 +69,17 @@ npm install connect --save
 
 #####Start the server application, listening on port 3000:
 
+##Backend.js
+  implement the GPIO interface, add the call to load the pi-gpio module
+  var wpi = require(' pi-gpio');
+  initialise the GPIO
+  open the ports as inputs    
+  (API receives a request for one of the inputs. The request should include the latest value read from the port.)      
+  add a timer loop to read each GPIO input    
+  store the latest value in our inputs array    
+  retrieve and display the "something" at "you decide" second intervals   
+  pass a callback function to a setInterval library function call   
+  
 ##Index.html  
   Create a placeholder to display the I/O values retrieved from Edison    
   Set up an input div as a placeholder, `<div id="input"></div>`      
