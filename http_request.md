@@ -68,6 +68,16 @@ Note: bodyParser() automatically turns your request data into a JavaScript objec
 
 ###Configure different routes and their associated callbacks
 
+####Save new messages 
+
+####Retrieve all messages
+
+####Define the functions
+
+####Define restful endpoint(s) 
+
+####Attach function to GET/POST/PUT/DELETE 
+
 ##Part 2b: Express:   
 
 ###Install Express
