@@ -16,7 +16,7 @@ jQuery runs the AJAX request in our client application. The server receives a re
   -see https://nodejs.org for installation instructions   
   
 ##Express
-  -a framework
+  -a framework        
   -create our application server as an object
   
 ##Code
@@ -36,7 +36,7 @@ npm install connect --save
   Format = JSON
   
 ##Install packages
-  var http = require('http');   
+  var http = require('http');          
   var express = require('express');
   
 ##Assign Express to a variable  
