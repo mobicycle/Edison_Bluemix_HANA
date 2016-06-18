@@ -10,17 +10,23 @@ RESTful APIs using AJAX principles allow a single-page client web app use to com
 jQuery runs the AJAX request in our client application. The server receives a request in the form of an XMLHttpRequest object. Javascript dynamically changes the current page to reflect the request. The response or HTTP reply is JavaScript code. The format is either as a string or in JSON.    
 
 ##PREREQUISITES
-##Node.JS
+
+###Backend server
+####Node.JS
   -a backend (server-side) framework for building single-page or client-server web apps   
   -asynchronous, event-based programming model    
   -see https://nodejs.org for installation instructions   
-  
-##Express
+
+###Library: Rest API 
+####Restify
+npm install restify  
+
+####Express
   -a framework        
   -create our application server as an object
 
-Library: GPIO control  
-###MRAA
+###Library: GPIO control  
+####MRAA
   already included by default on the Edison
   IO library that helps you use I2c, SPI, gpio, uart, pwm, analog inputs (aio)        
   see https://www.npmjs.com/package/mraa      
@@ -28,10 +34,6 @@ Library: GPIO control
 ###µpm 
   a (very) tiny package manager   
   npm install -g upm    
-
-Library: Rest API 
-###Restify
-npm install restify
 
 ##Weaved
   connect easily and securely to your Edison from a mobile app or browser window        
