@@ -11,7 +11,24 @@ jQuery runs the AJAX request in our client application. The server receives a re
 
 ##PREREQUISITES
 ##Node.JS
-  -a backend (server-side) framework for building single-page or client-server web apps
-  -asynchronous, event-based programming model
-  -see https://nodejs.org for installation instructions
+  -a backend (server-side) framework for building single-page or client-server web apps   
+  -asynchronous, event-based programming model    
+  -see https://nodejs.org for installation instructions   
+  
+##Express
+  -a framework
+  
+##Code
+mkdir myapp
+cd myapp
+npm init
+npm install express --save
+npm install connect --save
+
+##Files
+1.) Server-side Javascript code - myapi.js
+2.) A simple HTML page - index.html
+3.) Client-side Javascript - myclient.js
+
+
   
