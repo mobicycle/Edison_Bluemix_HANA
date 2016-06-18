@@ -71,3 +71,16 @@ npm install connect --save
   The JS code will    
     -Request "something" from the API server running on the Edison    
     -Retrieve "something else" from the API server running on the Edison.   
+
+##Start your web server which runs on your Edison 
+    cd into the folder you have saved the source files
+    enter `node app.js`
+    open a web browser on http://your_edison_IP_address:3000
+    
+##GPIO Notes
+    The mraa C library is the most direct way to get in touch with the Intel Edison's GPIO lines.
+    The faster way to work with GPIO lines is via memory mapped I/O.
+    Another mraa alternative, Sysfs, is a virtual file system. Use it to access hardware and the Linux kernel.
+    Yocto Linux is a non-realtime operating system  
+    I2C is a communications bus. Use it to connect a very large range of sensors. 
+    
