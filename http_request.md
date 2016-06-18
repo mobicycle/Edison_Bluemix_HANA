@@ -17,6 +17,7 @@ jQuery runs the AJAX request in our client application. The server receives a re
   
 ##Express
   -a framework
+  -create our application server as an object
   
 ##Code
 mkdir myapp   
@@ -26,9 +27,19 @@ npm install express --save
 npm install connect --save    
 
 ##Files
-1.) Server-side Javascript code - myapi.js    
+1.) Server-side Javascript code - backend.js    
 2.) A simple HTML page - index.html   
-3.) Client-side Javascript - myclient.js    
+3.) Client-side Javascript - browser.js    
 
+##Build a server in Javascript
+  Port = 3000 
+  Format = JSON
+  
+##Install packages
+  var http = require('http');   
+  var express = require('express');
+  
+##Assign Express to a variable  
+  var app = express();
 
   
