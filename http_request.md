@@ -18,15 +18,21 @@ jQuery runs the AJAX request in our client application. The server receives a re
 ##Express
   -a framework        
   -create our application server as an object
-  
-##MRAA
+
+Library: GPIO control  
+###MRAA
+  already included by default on the Edison
   IO library that helps you use I2c, SPI, gpio, uart, pwm, analog inputs (aio)        
   see https://www.npmjs.com/package/mraa      
   
-##µpm 
+###µpm 
   a (very) tiny package manager   
   npm install -g upm    
-  
+
+Library: Rest API 
+###Restify
+npm install restify
+
 ##Weaved
   connect easily and securely to your Edison from a mobile app or browser window        
   see https://developer.weaved.com/portal/members/edison.php
@@ -34,12 +40,15 @@ jQuery runs the AJAX request in our client application. The server receives a re
 #Part 1: Getting Started  
 
 ##Make the app
+opkg update Node.js
 mkdir myapp   
 cd myapp
 
 ##Build a server in Javascript
   Port = 3000        
   Format = JSON
+  var server = restify.createServer();
+  
 
 #Part 2: Express:   
 Goal: Define the API middleware for our server-side application
@@ -50,7 +59,8 @@ npm install express --save
 npm install connect --save    
 
 ##Install packages
-  var http = require('http');          
+  var http = require('http'); 
+  var restify = require('restify');
   var express = require('express');
   
 ##Assign Express to a variable  
@@ -117,7 +127,11 @@ npm install connect --save
     The Edison has 40 digital GPIO connections, but no analog I/O.  
     You can write programs for the microcontroller or MCU that work with the GPIO lines without the need to involve the host CPU.
     
-##Install   
+##UART example
+  Read and write to the Edison’s UART port    
+  Connect something to the UART port that can accept text input   
+  Connect something connected to the UART port that can send information to the Edison (like and RFID reader)    
+  enter curl –X POST –d “value=hello” http://EdisonIP/uart    
 
 #Part 5:      
 Congratulations! You now have a new web API running on Edison.         
