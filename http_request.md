@@ -36,16 +36,11 @@ npm init
 npm install express --save    
 npm install connect --save    
 
-##Create the files
-1.) Server-side Javascript code - backend.js    
-2.) A simple HTML page - index.html   
-3.) Client-side Javascript - browser.js    
-
 ##Build a server in Javascript
   Port = 3000        
   Format = JSON
 
-#Part 1: Express
+#Part 1: Express: Define the API middleware for our server-side application  
 
 ##Install packages
   var http = require('http');          
@@ -61,8 +56,6 @@ npm install connect --save
 ##Configure Express to serve index.html, browser.js et al
   app.use(express['static'](__dirname ));
   
-#Part 2: Define the API middleware for our server-side application  
-
 ##Define routes for the API calls and/or page requests to our server
 
 ####Express route for incoming requests
@@ -73,7 +66,13 @@ npm install connect --save
 
 #####Start the server application, listening on port 3000:
 
-##Backend.js
+#Files
+##Create the files
+1.) Server-side Javascript code - backend.js    
+2.) A simple HTML page - index.html   
+3.) Client-side Javascript - browser.js    
+
+###1.) Backend.js
   implement the GPIO interface, add the call to load the pi-gpio module
   var wpi = require(' pi-gpio');
   initialise the GPIO
@@ -84,12 +83,12 @@ npm install connect --save
   retrieve and display the "something" at "you decide" second intervals   
   pass a callback function to a setInterval library function call   
   
-##Index.html  
+###2.) Index.html  
   Create a placeholder to display the I/O values retrieved from Edison    
   Set up an input div as a placeholder, `<div id="input"></div>`      
   View output in our client-side JavaScript code sitting in browser.js
     
-##Browser.js
+###3.) Browser.js
   The browser loads our HTML page and executes JS code on the client machine    
   The JS code will    
     -Request "something" from the API server running on the Edison    
