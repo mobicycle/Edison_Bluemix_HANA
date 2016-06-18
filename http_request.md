@@ -65,3 +65,9 @@ npm install connect --save
   Create a placeholder to display the I/O values retrieved from Edison    
   Set up an input div as a placeholder, `<div id="input"></div>`      
   View output in our client-side JavaScript code sitting in browser.js
+    
+##Browser.js
+  The browser loads our HTML page and executes JS code on the client machine    
+  The JS code will    
+    -Request "something" from the API server running on the Edison    
+    -Retrieve "something else" from the API server running on the Edison.   
