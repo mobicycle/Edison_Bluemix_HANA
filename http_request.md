@@ -53,13 +53,13 @@ npm install connect --save
 
 ##Define routes for the API calls and/or page requests to our server
 
-###Express route for incoming requests
+####Express route for incoming requests
 
-###Express route for any other unrecognised incoming requests
+####Express route for any other unrecognised incoming requests
 
-###Express route to handle errors
+####Express route to handle errors
 
-###Start the server application, listening on port 3000:
+#####Start the server application, listening on port 3000:
 
 ##Index.html  
   Create a placeholder to display the I/O values retrieved from Edison    
