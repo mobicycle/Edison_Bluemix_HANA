@@ -5,8 +5,9 @@ see also http://m2m.demos.ibm.com/iotstarter.html
 ##Prerequisites
   Install either of the two relevant modules  
   cd /home/root/.node-red/node_modules/  
-  npm install node-red-contrib-scx-ibmiotapp   
-  npm install node-red-contrib-ibm-watson-iot 
+  choose one either
+  npm install node-red-contrib-scx-ibmiotapp  (for ibmiot in, ibmiot out)     
+  npm install node-red-contrib-ibm-watson-iot (for wiotp in, wiotp out)       
 
 ##Build a Bluemix app
   Create a new cloud foundry app and chose SDK for Node.js.  
