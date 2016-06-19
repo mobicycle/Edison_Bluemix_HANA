@@ -12,7 +12,7 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
 ##Secure your Node-RED flow with a password
   In the Bluemix dashboard, select the 'Environment Variables' page for your application    
   Add the following user-defined variables:  
-    NODE_RED_USERNAME - the username to secure the editor 
+    NODE_RED_USERNAME - the username to secure the editor      
     NODE_RED_PASSWORD - the password to secure the editor  
   Click Save    
 
@@ -93,18 +93,18 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Name optional 
 
 ##Connect to IBM Watson Internet of Things Plaform as a Device
-  double click on the IBM IoT node
-  replace the device ID with your device ID
-  Click "Ok"
-  Click on the red "Deploy" button
-  Click the green debug nodes to see data
-  Double-click the blue Send to Watson IoT Platform node in the Device Simulator flow.
-  Verify that Authentication = Bluemix Service
-  Paste the Device Type
-  Paste the Device ID
-  Click OK
-  click Deploy
+  double click on the IBM IoT node    
+  replace the device ID with your device ID   
+  Click "Ok"    
+  Click on the red "Deploy" button    
+  Click the green debug nodes to see data   
+  Double-click the blue Send to Watson IoT Platform node in the Device Simulator flow.    
+  Verify that Authentication = Bluemix Service    
+  Paste the Device Type   
+  Paste the Device ID   
+  Click OK    
+  click Deploy    
   
   
-  ##Create cards to show live data
+  ##Create cards to show live data    
   
