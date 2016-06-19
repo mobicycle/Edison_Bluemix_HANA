@@ -30,11 +30,16 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Create a device  
   Add a name  
   Add an auth token 
+  
+#Registered Devices  
 
-Registered Session
+##Install and edit "ibmiot in" on the Edison
+  npm install node-red-contrib-scx-ibmiotapp@0.0.xx
+  Enter the API Key, API Key and API Token options 
+  The API Key and Token can be shared across multiple nodes 
 
-##Install and edit "ibmiot in" node 
-npm install node-red-contrib-scx-ibmiotapp@0.0.xx
+##Install and edit "ibmiot in" node on Bluemix
+  npm install node-red-contrib-scx-ibmiotapp@0.0.xx
 
 ###Receive device events    
   In your IBM IoT Foundation Service Dashboard  
