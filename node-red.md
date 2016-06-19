@@ -1,6 +1,7 @@
 #Steps in Node Red
 
 see also http://m2m.demos.ibm.com/iotstarter.html
+https://libraries.io/npm/node-red-contrib-scx-ibmiotapp
 
 ##Definitions
 scx-ibmiotapp can be used within, as well as, outside the IBM Bluemix environment (preferred)   
@@ -29,10 +30,21 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Create a device  
   Add a name  
   Add an auth token 
-  
-##Install and edit "ibmiot in" node
+
+Registered Session
+
+##Install and edit "ibmiot in" node 
+npm install node-red-contrib-scx-ibmiotapp@0.0.xx
 
 ###Receive device events    
+  In your IBM IoT Foundation Service Dashboard  
+  Create an API Key  
+  Create Authentication Token  
+  Select the ACCESS tab => API Keys tab 
+  Click the Generate API Key  
+  COPY AND SAVE the display API Key and Token 
+  
+
 
 ###Receive device status    
 
