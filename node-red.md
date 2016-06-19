@@ -4,8 +4,8 @@ see also http://m2m.demos.ibm.com/iotstarter.html
 https://libraries.io/npm/node-red-contrib-scx-ibmiotapp
 
 ##Definitions
-scx-ibmiotapp can be used within, as well as, outside the IBM Bluemix environment (preferred)   
-ibm-watson-iot is for connecting to the IBM Watson IoT Platform as a Device or Gateway
+scx-ibmiotapp can be used within, as well as, outside the IBM Bluemix environment (Bluemix)   
+ibm-watson-iot is for connecting to the IBM Watson IoT Platform as a Device or Gateway (Edison)
 
 The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT platform, it internally publishes to its own unique topic string. If you register your devices, you get a unique org.
 
@@ -45,6 +45,11 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
 
 ##Install and edit "ibmiot in" node on Bluemix
   npm install node-red-contrib-scx-ibmiotapp@0.0.xx
+  Register your device on the platform  ....
+  Get device credentials
+  Generate API Key 
+  Generate Token 
+  
 
 ###Receive device events    
   In your IBM IoT Foundation Service Dashboard  
@@ -54,19 +59,52 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Click the Generate API Key  
   COPY AND SAVE the display API Key and Token 
   
+  Double-click the blue Send to Watson IoT Platform node in
+  Verify that Authentication = Bluemix Service
+  Paste the Device Type
+  Paste the Device ID
+  Click OK
+  Click Deploy
+  Double-click the blue IBM IoT App In node
+  Change Authentication to Bluemix Service
+  Select All for Device Type, Device Id, Event, and Format
+  device ID = MAC address with no colons. run the ifconfig if necessary
+  Click OK
+  Click Deploy
+  
+  Validate the device connection
+  Open another browser tab or window
+  Watson IoT Platform dashboard
+  Select Devices
+  device information page opens
+  See the connection status = disconnected
+  Node-RED flow editor
+  Click the button on the gray Send Data node 
+  Generate an asset payload
+  debug tab, messages
+  Watson IoT Platform device information page, verify that you see the same data points received from the device in the Sensor Information section
+
+  
 
 
 ###Receive device status    
+go into the sensor section
+select to manage sensors 
 
-###Receive device commands (on the behalf of a device)    
+###Receive device commands (on the behalf of a device)  
+
 
 ###Receive application status   
 
-##Install and edit "ibmiot out" node
+##Send device commands from Bluemix to Intel Edison
 
-###Send device commands
+###Install and edit "ibmiot out" node
+Drag and drop ibmiot node
 
 ###Send device events
+
+
+#Watson IOT for Intel Edison
 
 ##Install and edit "wiotp in" node 
   Connect as device  
@@ -80,6 +118,15 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   device id  
   device token    
   name (optional)  
+
+##Receive commands on your Intel Edison device from Bluemix
+After adding an Watson IoT Input node on the Edison
+Configure the node to connect as a Device
+Use the previous credentials 
+Set it to receive all commands
+Attach a debug node to the Watson IoT Input node
+Deploy the flow
+
   
 ##Add function node to move the ? data into the payload object. 
   Name optional <your name>  
@@ -91,6 +138,10 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Extra input parameters - leave blank    
   Use spawn instead of exec? - leave blank    
   Name optional 
+  
+  inject node
+  function node
+  Watson IoT Output node
 
 ##Connect to IBM Watson Internet of Things Plaform as a Device
   double click on the IBM IoT node    
