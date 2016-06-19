@@ -44,6 +44,19 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Get device credentials
   Generate API Key 
   Generate Token 
+  
+##Install and edit "wiotp in" node 
+  Connect as device  
+  Credentials - add new wiotp credentials (see below)  
+  Command - specify command = list    
+  Name - cmd: list    
+
+##Add new wiotp credentials 
+  organisation    
+  device type  
+  device id  
+  device token    
+  name (optional)  
 ---------------------------------------------------------------------------
 
 ##Build a Bluemix app
@@ -69,7 +82,7 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Click the Generate API Key  
   COPY AND SAVE the display API Key and Token 
   
-  ###2Double-click the blue Send to Watson IoT Platform node in
+  ###2 Double-click the blue Send to Watson IoT Platform node in
   Verify that Authentication = Bluemix Service
   Paste the Device Type
   Paste the Device ID
@@ -82,7 +95,7 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Click OK
   Click Deploy
   
-  ###3Validate the device connection
+  ###3 Validate the device connection
   Open another browser tab or window
   Watson IoT Platform dashboard
   Select Devices
@@ -137,28 +150,14 @@ Click deploy
 ###Send device events
 
 ---------------------------------------------------------------------
-#Receive commands on your Intel Edison device
+#Receive commands on your Intel Edison device from Bluemix
 
-##Install and edit "wiotp in" node 
-  Connect as device  
-  Credentials - add new wiotp credentials (see below)  
-  Command - specify command = list    
-  Name - cmd: list    
-
-##Add new wiotp credentials 
-  organisation    
-  device type  
-  device id  
-  device token    
-  name (optional)  
-
-##Receive commands on your Intel Edison device from Bluemix
-After adding an Watson IoT Input node on the Edison
-Configure the node to connect as a Device
-Use the previous credentials 
-Set it to receive all commands
-Attach a debug node to the Watson IoT Input node
-Deploy the flow
+  After adding an Watson IoT Input node on the Edison
+  Configure the node to connect as a Device
+  Use the previous credentials 
+  Set it to receive all commands
+  Attach a debug node to the Watson IoT Input node
+  Deploy the flow
 
 ---------------------------------------------------------------------------  
 #####Add function node to move the ? data into the payload object. 
