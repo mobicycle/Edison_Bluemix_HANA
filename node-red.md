@@ -10,10 +10,10 @@ ibm-watson-iot is for connecting to the IBM Watson IoT Platform as a Device or G
 The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT platform, it internally publishes to its own unique topic string. If you register your devices, you get a unique org.
 
 ##Secure your Node-RED flow with a password
-  In the Bluemix dashboard, select the 'Environment Variables' page for your application    
-  Add the following user-defined variables:  
-    NODE_RED_USERNAME - the username to secure the editor      
-    NODE_RED_PASSWORD - the password to secure the editor  
+  Go to the Bluemix dashboard
+  Go to 'Environment Variables' 
+  Add your NODE_RED_USERNAME   
+  Add your NODE_RED_PASSWORD 
   Click Save    
 
 ##Prerequisites
