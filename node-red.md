@@ -2,6 +2,14 @@
 
 see also http://m2m.demos.ibm.com/iotstarter.html
 
+##Definitions
+scx-ibmiotapp can be used within, as well as, outside the IBM Bluemix environment (preferred)   
+ibm-watson-iot is for connecting to the IBM Watson IoT Platform as a Device or Gateway
+
+The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT platform, it internally publishes to its own unique topic string. If you register your devices, you get a unique org.
+
+
+
 ##Prerequisites
   Install either of the two relevant modules  
   cd /home/root/.node-red/node_modules/  
@@ -21,8 +29,24 @@ see also http://m2m.demos.ibm.com/iotstarter.html
   Create a device  
   Add a name  
   Add an auth token 
+  
+##Install and edit "ibmiot in" node
 
-##Edit "wiotp in" node 
+###Receive device events    
+
+###Receive device status    
+
+###Receive device commands (on the behalf of a device)    
+
+###Receive application status   
+
+##Install and edit "ibmiot out" node
+
+###Send device commands
+
+###Send device events
+
+##Install and edit "wiotp in" node 
   Connect as device  
   Credentials - add new wiotp credentials (see below)  
   Command - specify command = list    
