@@ -4,52 +4,35 @@ see also http://m2m.demos.ibm.com/iotstarter.html
 https://libraries.io/npm/node-red-contrib-scx-ibmiotapp
 
 ##Definitions
-scx-ibmiotapp can be used within, as well as, outside the IBM Bluemix environment (Bluemix)   
-ibm-watson-iot is for connecting to the IBM Watson IoT Platform as a Device or Gateway (Edison)
+  scx-ibmiotapp can be used within, as well as, outside the IBM Bluemix environment (Bluemix)   
+  ibm-watson-iot is for connecting to the IBM Watson IoT Platform as a Device or Gateway (Edison)
 
 The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT platform, it internally publishes to its own unique topic string. If you register your devices, you get a unique org.
 
 ##Secure your Node-RED flow with a password
   Go to the Bluemix dashboard
   Go to 'Environment Variables' 
-  Add your NODE_RED_USERNAME   
-  Add your NODE_RED_PASSWORD 
+    Add your NODE_RED_USERNAME   
+    Add your NODE_RED_PASSWORD 
   Click Save    
 --------------------------------------------------------------------------------
 #Steps
 
-  Install Node-RED on your Device   
-  Register your Device    
-  Simulate a Temperature Device   
+  Install Node-RED on your Device 
   Create a Node-RED application to receive events from the device   
-  Analyze temperature data    
+  Register your Device    
+    Simulate a Temperature Device   
+    Analyze temperature data    
   Send commands to your device    
   Receive commands on your device   
   
 --------------------------------------------------------------------------------
-#Prerequisites
-  Install   
+#Install 
   cd /home/root/.node-red/node_modules/  
   choose one either
-  npm install node-red-contrib-scx-ibmiotapp  (for ibmiot in, ibmiot out)     
-  npm install node-red-contrib-ibm-watson-iot (for wiotp in, wiotp out)       
-
-##Build a Bluemix app
-  Create a new cloud foundry app and chose SDK for Node.js.  
-  Bind your already existing IoT plarform service   
-  The app connects to the IoT plattform using the credentials in VCAP_SERVICES.  
-  Go to “Environment Variables” (look above “Start Coding”) 
-
-##Create a device in Watson IoT Dashboard
-  Open Watson IoT Dashboard  
-  Create device type  
-  Create a device  
-  Add a name  
-  Add an auth token 
-  
----------------------------------------------------------------------------
-#Installations
-
+    npm install node-red-contrib-scx-ibmiotapp  (for ibmiot in, ibmiot out)     
+    npm install node-red-contrib-ibm-watson-iot (for wiotp in, wiotp out) 
+ 
 ##Install and edit "ibmiot in" on the Edison
   npm install node-red-contrib-scx-ibmiotapp@0.0.xx (if necessary)
   Enter the API Key, API Key and API Token options 
@@ -61,10 +44,24 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Get device credentials
   Generate API Key 
   Generate Token 
--------------------------------------------------------------------------  
-#Bluemix 
+---------------------------------------------------------------------------
 
-###Receive device events from the Intel Edison in Bluemix    
+##Build a Bluemix app
+  Create a new cloud foundry app and chose SDK for Node.js.  
+  Bind your already existing IoT plarform service   
+  The app connects to the IoT plattform using the credentials in VCAP_SERVICES.  
+  Go to “Environment Variables” (look above “Start Coding”) 
+
+---------------------------------------------------------------------------
+
+##Register a device in Watson IoT Dashboard (from the Intel Edison in Bluemix) 
+  Open Watson IoT Dashboard  
+  Create device type  
+  Create a device  
+  Add a name  
+  Add an auth token 
+  
+  ###1
   In your IBM IoT Foundation Service Dashboard  
   Create an API Key  
   Create Authentication Token  
@@ -72,7 +69,7 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Click the Generate API Key  
   COPY AND SAVE the display API Key and Token 
   
-  Double-click the blue Send to Watson IoT Platform node in
+  ###2Double-click the blue Send to Watson IoT Platform node in
   Verify that Authentication = Bluemix Service
   Paste the Device Type
   Paste the Device ID
@@ -85,7 +82,7 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Click OK
   Click Deploy
   
-  Validate the device connection
+  ###3Validate the device connection
   Open another browser tab or window
   Watson IoT Platform dashboard
   Select Devices
@@ -96,18 +93,36 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Generate an asset payload
   debug tab, messages
   Watson IoT Platform device information page, verify that you see the same data points received from the device in the Sensor Information section
-
   
+  ###4 
+  ##Connect to IBM Watson Internet of Things Plaform as a Device
+  double click on the IBM IoT node    
+  replace the device ID with your device ID   
+  Click "Ok"    
+  Click on the red "Deploy" button    
+  Click the green debug nodes to see data   
+  Double-click the blue Send to Watson IoT Platform node in the Device Simulator flow.    
+  Verify that Authentication = Bluemix Service    
+  Paste the Device Type   
+  Paste the Device ID   
+  Click OK    
+  click Deploy    
+  
+  
+  ##Create cards to show live data    
+  
+-------------------------------------------------------------------------  
+More Bluemix
 
+#Receive device commands (on the behalf of a device) in Bluemix 
 
 ###Receive device status    
 go into the sensor section
 select to manage sensors 
 
-###Receive device commands (on the behalf of a device)  
+###Receive application status  
 
-
-###Receive application status   
+---------------------------------------------------------------------------
 
 #Send device commands from Bluemix to Intel Edison
 
@@ -122,7 +137,7 @@ Click deploy
 ###Send device events
 
 ---------------------------------------------------------------------
-#Intel Edison
+#Receive commands on your Intel Edison device
 
 ##Install and edit "wiotp in" node 
   Connect as device  
@@ -161,19 +176,5 @@ Deploy the flow
   function node
   Watson IoT Output node
 
-##Connect to IBM Watson Internet of Things Plaform as a Device
-  double click on the IBM IoT node    
-  replace the device ID with your device ID   
-  Click "Ok"    
-  Click on the red "Deploy" button    
-  Click the green debug nodes to see data   
-  Double-click the blue Send to Watson IoT Platform node in the Device Simulator flow.    
-  Verify that Authentication = Bluemix Service    
-  Paste the Device Type   
-  Paste the Device ID   
-  Click OK    
-  click Deploy    
-  
-  
-  ##Create cards to show live data    
+
   
