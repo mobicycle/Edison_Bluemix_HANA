@@ -15,9 +15,20 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Add your NODE_RED_USERNAME   
   Add your NODE_RED_PASSWORD 
   Click Save    
+--------------------------------------------------------------------------------
+#Steps
 
-##Prerequisites
-  Install either of the two relevant modules  
+  Install Node-RED on your Device   
+  Register your Device    
+  Simulate a Temperature Device   
+  Create a Node-RED application to receive events from the device   
+  Analyze temperature data    
+  Send commands to your device    
+  Receive commands on your device   
+  
+--------------------------------------------------------------------------------
+#Prerequisites
+  Install   
   cd /home/root/.node-red/node_modules/  
   choose one either
   npm install node-red-contrib-scx-ibmiotapp  (for ibmiot in, ibmiot out)     
@@ -36,22 +47,24 @@ The Watson IoT plaftorm uses pub/sub. As each device connects to the Watson IoT 
   Add a name  
   Add an auth token 
   
-#Registered Devices  
+---------------------------------------------------------------------------
+#Installations
 
 ##Install and edit "ibmiot in" on the Edison
-  npm install node-red-contrib-scx-ibmiotapp@0.0.xx
+  npm install node-red-contrib-scx-ibmiotapp@0.0.xx (if necessary)
   Enter the API Key, API Key and API Token options 
   The API Key and Token can be shared across multiple nodes 
 
 ##Install and edit "ibmiot in" node on Bluemix
-  npm install node-red-contrib-scx-ibmiotapp@0.0.xx
+  npm install node-red-contrib-scx-ibmiotapp@0.0.xx (if necessary)
   Register your device on the platform  ....
   Get device credentials
   Generate API Key 
   Generate Token 
-  
+-------------------------------------------------------------------------  
+#Bluemix 
 
-###Receive device events    
+###Receive device events from the Intel Edison in Bluemix    
   In your IBM IoT Foundation Service Dashboard  
   Create an API Key  
   Create Authentication Token  
@@ -96,15 +109,20 @@ select to manage sensors
 
 ###Receive application status   
 
-##Send device commands from Bluemix to Intel Edison
+#Send device commands from Bluemix to Intel Edison
 
-###Install and edit "ibmiot out" node
+##Install and edit "ibmiot out" node
+Go to output pane
 Drag and drop ibmiot node
+Configure it with the same api keys
+Configure the device Id
+Set the Output type as Device Command
+Click deploy
 
 ###Send device events
 
-
-#Watson IOT for Intel Edison
+---------------------------------------------------------------------
+#Intel Edison
 
 ##Install and edit "wiotp in" node 
   Connect as device  
@@ -127,12 +145,12 @@ Set it to receive all commands
 Attach a debug node to the Watson IoT Input node
 Deploy the flow
 
-  
-##Add function node to move the ? data into the payload object. 
+---------------------------------------------------------------------------  
+#####Add function node to move the ? data into the payload object. 
   Name optional <your name>  
   line #1 msg.payload=msg.payload.d.<your name>  
   
-##Exec node consumes the data, executes the Linux list command, and 
+#####Exec node consumes the data, executes the Linux list command, and 
   Command  ls-la    
   Append    
   Extra input parameters - leave blank    
